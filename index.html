@@ -27,6 +27,47 @@
 			body {
 				font-family: 'NoirPro Regular', sans-serif;
 			}
+
+			/* Service Button Styles */
+			.service-button {
+				display: block;
+				text-decoration: none;
+			}
+
+			.service-button div {
+				transition: all 0.3s ease;
+			}
+
+			.service-button:hover div {
+				transform: translateY(-5px);
+				box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+			}
+
+			/* Service Section Styles */
+			#services section {
+				height: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+
+			#services section div {
+				max-width: 1200px;
+				width: 100%;
+			}
+
+			/* List Item Styles */
+			#services li {
+				position: relative;
+				padding-left: 1.5rem;
+			}
+
+			#services li:before {
+				content: "✓";
+				position: absolute;
+				left: 0;
+				color: #029A4D;
+			}
 		 </style>
 
 	</head>
@@ -147,6 +188,179 @@
 							</div>
 						</div>
 					</section>
+				</section>
+
+				<!-- Services Overview Section -->
+				<section data-background-color="#f5f5f5">
+					<h2 style="color: #333; margin-bottom: 2rem;">Our Services</h2>
+					<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; padding: 0 4rem;">
+						<a href="#/services/web-dev" class="service-button" style="text-decoration: none;">
+							<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
+								<h3 style="color: #333;">Web Development</h3>
+								<p style="color: #666;">Custom websites and web applications</p>
+							</div>
+						</a>
+						<a href="#/services/software-automation" class="service-button" style="text-decoration: none;">
+							<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
+								<h3 style="color: #333;">Software & Automation</h3>
+								<p style="color: #666;">Custom software solutions and process automation</p>
+							</div>
+						</a>
+						<a href="#/services/marketing" class="service-button" style="text-decoration: none;">
+							<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
+								<h3 style="color: #333;">Marketing</h3>
+								<p style="color: #666;">Digital marketing and growth strategies</p>
+							</div>
+						</a>
+						<a href="#/services/consulting" class="service-button" style="text-decoration: none;">
+							<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
+								<h3 style="color: #333;">Consulting</h3>
+								<p style="color: #666;">Strategic technology consulting</p>
+							</div>
+						</a>
+						<a href="#/services/outsourcing" class="service-button" style="text-decoration: none;">
+							<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
+								<h3 style="color: #333;">Outsourcing</h3>
+								<p style="color: #666;">Dedicated development teams and resources</p>
+							</div>
+						</a>
+					</div>
+				</section>
+
+				<!-- Detailed Service Slides -->
+				<!-- Web Development Service -->
+				<section id="web-dev" data-background-color="#f5f5f5">
+					<div style="padding: 2rem;">
+						<h2 style="color: #333;">Web Development</h2>
+						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+							<div>
+								<h3 style="color: #333;">What We Offer</h3>
+								<ul style="color: #666; list-style-type: none; padding: 0;">
+									<li style="margin-bottom: 1rem;">✓ Custom Website Development</li>
+									<li style="margin-bottom: 1rem;">✓ E-commerce Solutions</li>
+									<li style="margin-bottom: 1rem;">✓ Progressive Web Apps</li>
+									<li style="margin-bottom: 1rem;">✓ CMS Development</li>
+								</ul>
+							</div>
+							<div>
+								<h3 style="color: #333;">Technologies</h3>
+								<ul style="color: #666; list-style-type: none; padding: 0;">
+									<li style="margin-bottom: 1rem;">✓ React & Next.js</li>
+									<li style="margin-bottom: 1rem;">✓ Node.js & Express</li>
+									<li style="margin-bottom: 1rem;">✓ WordPress & Shopify</li>
+									<li style="margin-bottom: 1rem;">✓ Cloud Infrastructure</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Software & Automation Service -->
+				<section id="software-automation" data-background-color="#f5f5f5">
+					<div style="padding: 2rem;">
+						<h2 style="color: #333;">Software & Automation</h2>
+						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+							<div>
+								<h3 style="color: #333;">Solutions</h3>
+								<ul style="color: #666; list-style-type: none; padding: 0;">
+									<li style="margin-bottom: 1rem;">✓ Custom Software Development</li>
+									<li style="margin-bottom: 1rem;">✓ Business Process Automation</li>
+									<li style="margin-bottom: 1rem;">✓ API Development</li>
+									<li style="margin-bottom: 1rem;">✓ System Integration</li>
+								</ul>
+							</div>
+							<div>
+								<h3 style="color: #333;">Technologies</h3>
+								<ul style="color: #666; list-style-type: none; padding: 0;">
+									<li style="margin-bottom: 1rem;">✓ Python & Django</li>
+									<li style="margin-bottom: 1rem;">✓ Java & Spring Boot</li>
+									<li style="margin-bottom: 1rem;">✓ .NET Core</li>
+									<li style="margin-bottom: 1rem;">✓ RPA Tools</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Marketing Service -->
+				<section id="marketing" data-background-color="#f5f5f5">
+					<div style="padding: 2rem;">
+						<h2 style="color: #333;">Marketing Services</h2>
+						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+							<div>
+								<h3 style="color: #333;">Digital Marketing</h3>
+								<ul style="color: #666; list-style-type: none; padding: 0;">
+									<li style="margin-bottom: 1rem;">✓ SEO Optimization</li>
+									<li style="margin-bottom: 1rem;">✓ Social Media Marketing</li>
+									<li style="margin-bottom: 1rem;">✓ Content Marketing</li>
+									<li style="margin-bottom: 1rem;">✓ Email Marketing</li>
+								</ul>
+							</div>
+							<div>
+								<h3 style="color: #333;">Analytics & Strategy</h3>
+								<ul style="color: #666; list-style-type: none; padding: 0;">
+									<li style="margin-bottom: 1rem;">✓ Market Research</li>
+									<li style="margin-bottom: 1rem;">✓ Performance Analytics</li>
+									<li style="margin-bottom: 1rem;">✓ Growth Strategy</li>
+									<li style="margin-bottom: 1rem;">✓ Brand Development</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Consulting Service -->
+				<section id="consulting" data-background-color="#f5f5f5">
+					<div style="padding: 2rem;">
+						<h2 style="color: #333;">Consulting Services</h2>
+						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+							<div>
+								<h3 style="color: #333;">Strategic Consulting</h3>
+								<ul style="color: #666; list-style-type: none; padding: 0;">
+									<li style="margin-bottom: 1rem;">✓ Digital Transformation</li>
+									<li style="margin-bottom: 1rem;">✓ Technology Roadmap</li>
+									<li style="margin-bottom: 1rem;">✓ Process Optimization</li>
+									<li style="margin-bottom: 1rem;">✓ Risk Assessment</li>
+								</ul>
+							</div>
+							<div>
+								<h3 style="color: #333;">Expertise Areas</h3>
+								<ul style="color: #666; list-style-type: none; padding: 0;">
+									<li style="margin-bottom: 1rem;">✓ Cloud Architecture</li>
+									<li style="margin-bottom: 1rem;">✓ Security Consulting</li>
+									<li style="margin-bottom: 1rem;">✓ DevOps Strategy</li>
+									<li style="margin-bottom: 1rem;">✓ Agile Transformation</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</section>
+
+				<!-- Outsourcing Service -->
+				<section id="outsourcing" data-background-color="#f5f5f5">
+					<div style="padding: 2rem;">
+						<h2 style="color: #333;">Outsourcing Services</h2>
+						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
+							<div>
+								<h3 style="color: #333;">Dedicated Teams</h3>
+								<ul style="color: #666; list-style-type: none; padding: 0;">
+									<li style="margin-bottom: 1rem;">✓ Full-Stack Development</li>
+									<li style="margin-bottom: 1rem;">✓ QA & Testing</li>
+									<li style="margin-bottom: 1rem;">✓ DevOps Teams</li>
+									<li style="margin-bottom: 1rem;">✓ Support & Maintenance</li>
+								</ul>
+							</div>
+							<div>
+								<h3 style="color: #333;">Engagement Models</h3>
+								<ul style="color: #666; list-style-type: none; padding: 0;">
+									<li style="margin-bottom: 1rem;">✓ Dedicated Resources</li>
+									<li style="margin-bottom: 1rem;">✓ Project-Based</li>
+									<li style="margin-bottom: 1rem;">✓ Time & Materials</li>
+									<li style="margin-bottom: 1rem;">✓ Managed Services</li>
+								</ul>
+							</div>
+						</div>
+					</div>
 				</section>
 			</div>
 		</div>
