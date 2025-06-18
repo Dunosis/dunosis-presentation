@@ -1,384 +1,1020 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <title>reveal.js</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+  <link rel="stylesheet" href="dist/reset.css" />
+  <link rel="stylesheet" href="dist/reveal.css" />
+  <link rel="stylesheet" href="dist/theme/black.css" />
 
-		<!-- Custom Font Styles -->
-		<style>
-			@font-face {
-				font-family: 'NoirPro Regular';
-				src: url('assets/fonts/NoirPro-Regular.eot') format('eot'),	
-					 url('assets/fonts/NoirPro-Regular.woff2') format('woff2'),
-					 url('assets/fonts/NoirPro-Regular.woff') format('woff');
-				font-weight: normal;
-				font-style: normal;
-			}
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css" />
 
-			body {
-				font-family: 'NoirPro Regular', sans-serif;
-			}
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-			/* Service Button Styles */
-			.service-button {
-				display: block;
-				text-decoration: none;
-			}
+  <!-- Styles css -->
+  <link rel="stylesheet" href="css/styles.css" />
 
-			.service-button div {
-				transition: all 0.3s ease;
-			}
+  <link href="https://fonts.googleapis.com/css2?family=Boldonse&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Paytone+One&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
 
-			.service-button:hover div {
-				transform: translateY(-5px);
-				box-shadow: 0 8px 15px rgba(0,0,0,0.1);
-			}
+  <!-- Custom Font Styles -->
+  <style>
+    body {
+      font-family: "Outfit", sans-serif;
+    }
 
-			/* Service Section Styles */
-			#services section {
-				height: 100%;
-				display: flex;
-				align-items: center;
-				justify-content: center;
-			}
+    /* Service Button Styles */
+    .service-button {
+      display: block;
+      text-decoration: none;
+    }
 
-			#services section div {
-				max-width: 1200px;
-				width: 100%;
-			}
+    .service-button div {
+      transition: all 0.3s ease;
+    }
 
-			/* List Item Styles */
-			#services li {
-				position: relative;
-				padding-left: 1.5rem;
-			}
+    .service-button:hover div {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+    }
 
-			#services li:before {
-				content: "✓";
-				position: absolute;
-				left: 0;
-				color: #029A4D;
-			}
-		 </style>
+    /* Service Section Styles */
+    #services section {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section data-background-color="#f5f5f5" style="display: flex; flex-direction: column; justify-content: center; align-items: center;">
-					<div style="display: flex; justify-content: space-between; align-items: center; width: 100%;">
-					  
-						<!-- Left Bars -->
-						<div style="display: flex; flex-direction: column; align-items: flex-start; width: 100%; gap: 0.5rem;">
-							<div style="width: 20%; height: 1rem; background-color: #C62A2C;"></div>
-							<div style="width: 40%; height: 1rem; background-color: #ECB731;"></div>
-							<div style="width: 60%; height: 1rem; background-color: #029A4D;"></div>
-						</div>
-					
-						<!-- Logo and Tagline -->
-						<div style="width: 950px; display: flex; flex-direction: column; align-items: center;">
-							<img src="assets/images/dunosis-logo.png" alt="Dunosis Logo" style="margin-bottom: 1rem;">
-							<p style="font-size: 1.25rem; margin-top: 1rem;">
-								Services and Pricing Presentation
-							</p>
-						</div>
+    #services section div {
+      max-width: 1200px;
+      width: 100%;
+    }
 
-					
-						<!-- Right Bars -->
-						<div style="display: flex; flex-direction: column; align-items: flex-end; width: 100%; gap: 0.5rem;">
-							<div style="width: 20%; height: 1rem; background-color: #C62A2C;"></div>
-							<div style="width: 40%; height: 1rem; background-color: #ECB731;"></div>
-							<div style="width: 60%; height: 1rem; background-color: #029A4D;"></div>
-						</div>
-				  
-					</div>
-				</section>
-				<section data-background-color="#f5f5f5" style="display: flex; align-items: center; justify-content: center;">
-  
-					<section>
-					<div style="display: flex; width: 100%; gap: 2rem;">
-						<!-- Left Column - About Us Text -->
-						<div style="flex: 1; text-align: left;">
-							<h2 style="color: #333; margin-bottom: 1rem;">About Us</h2>
-							<p style="font-size: 1.2rem; line-height: 1.6; color: #666;">
-								Dunosis is a leading technology solutions provider dedicated to empowering businesses through innovative digital transformation. With our expertise in software development, cloud solutions, and strategic consulting, we help organizations navigate the evolving technological landscape.
-							</p>
-							<p style="font-size: 1.2rem; line-height: 1.6; color: #666; margin-top: 1rem;">
-								Our team of experienced professionals is committed to delivering high-quality solutions that drive growth and efficiency for our clients across various industries.
-							</p>
-						</div>
+    /* List Item Styles */
+    #services li {
+      position: relative;
+      padding-left: 1.5rem;
+    }
 
-						<!-- Right Column - Key Points -->
-						<div style="flex: 1;">
-							<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1);">
-								<h3 style="color: #333; margin-bottom: 1rem;">Our Core Values</h3>
-								<ul style="list-style: none; padding: 0;">
-									<li style="margin-bottom: 1rem; display: flex; align-items: center;">
-										<div style="width: 10px; height: 10px; background-color: #C62A2C; margin-right: 1rem;"></div>
-										<span style="color: #666;">Innovation Excellence</span>
-									</li>
-									<li style="margin-bottom: 1rem; display: flex; align-items: center;">
-										<div style="width: 10px; height: 10px; background-color: #ECB731; margin-right: 1rem;"></div>
-										<span style="color: #666;">Client-Centric Approach</span>
-									</li>
-									<li style="margin-bottom: 1rem; display: flex; align-items: center;">
-										<div style="width: 10px; height: 10px; background-color: #029A4D; margin-right: 1rem;"></div>
-										<span style="color: #666;">Quality Commitment</span>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-					</section>
-					<!-- Marketing Team Vertical Slide -->
-					<section>
-						<h2 style="color: #333; margin-bottom: 2rem;">Marketing Team</h2>
-						<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-							<div style="text-align: center;">
-								<img src="assets/images/team/marketing1.jpg" alt="Sarah Johnson" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
-								<h3 style="color: #333;">Sarah Johnson</h3>
-								<p style="color: #666;">Marketing Director</p>
-								<p style="color: #666; font-size: 0.9rem;">10+ years of digital marketing expertise, specializing in B2B strategies.</p>
-							</div>
-							<div style="text-align: center;">
-								<img src="assets/images/team/marketing2.jpg" alt="Michael Chen" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
-								<h3 style="color: #333;">Michael Chen</h3>
-								<p style="color: #666;">Content Strategist</p>
-								<p style="color: #666; font-size: 0.9rem;">Expert in creating engaging content and managing social media campaigns.</p>
-							</div>
-							<div style="text-align: center;">
-								<img src="assets/images/team/marketing3.jpg" alt="Emma Davis" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
-								<h3 style="color: #333;">Emma Davis</h3>
-								<p style="color: #666;">Brand Manager</p>
-								<p style="color: #666; font-size: 0.9rem;">Passionate about building strong brand identities and market positioning.</p>
-							</div>
-						</div>
-					</section>
+    #services li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #029a4d;
+    }
+  </style>
+</head>
 
-					<!-- Development Team Vertical Slide -->
-					<section>
-						<h2 style="color: #333; margin-bottom: 2rem;">Development Team</h2>
-						<div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem;">
-							<div style="text-align: center;">
-								<img src="assets/images/team/dev1.jpg" alt="Alex Turner" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
-								<h3 style="color: #333;">Alex Turner</h3>
-								<p style="color: #666;">Lead Developer</p>
-								<p style="color: #666; font-size: 0.9rem;">Full-stack developer with expertise in cloud architecture and scalable solutions.</p>
-							</div>
-							<div style="text-align: center;">
-								<img src="assets/images/team/dev2.jpg" alt="Maria Garcia" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
-								<h3 style="color: #333;">Maria Garcia</h3>
-								<p style="color: #666;">Frontend Specialist</p>
-								<p style="color: #666; font-size: 0.9rem;">UI/UX expert focused on creating intuitive and responsive web applications.</p>
-							</div>
-							<div style="text-align: center;">
-								<img src="assets/images/team/dev3.jpg" alt="James Wilson" style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover; margin-bottom: 1rem;">
-								<h3 style="color: #333;">James Wilson</h3>
-								<p style="color: #666;">Backend Engineer</p>
-								<p style="color: #666; font-size: 0.9rem;">Database optimization and API development specialist with security focus.</p>
-							</div>
-						</div>
-					</section>
-				</section>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section data-background-color="#f5f5f5" style="
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          ">
+        <div style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              width: 100%;
+            ">
+          <!-- Left Bars -->
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
+                width: 100%;
+                gap: 0.5rem;
+              ">
+            <div style="width: 20%; height: 1rem; background-color: #c62a2c"></div>
+            <div style="width: 40%; height: 1rem; background-color: #ecb731"></div>
+            <div style="width: 60%; height: 1rem; background-color: #029a4d"></div>
+          </div>
 
-				<!-- Services Overview Section -->
-				<section data-background-color="#f5f5f5">
-					<h2 style="color: #333; margin-bottom: 2rem;">Our Services</h2>
-					<div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; padding: 0 4rem;">
-						<a href="#/services/web-dev" class="service-button" style="text-decoration: none;">
-							<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
-								<h3 style="color: #333;">Web Development</h3>
-								<p style="color: #666;">Custom websites and web applications</p>
-							</div>
-						</a>
-						<a href="#/services/software-automation" class="service-button" style="text-decoration: none;">
-							<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
-								<h3 style="color: #333;">Software & Automation</h3>
-								<p style="color: #666;">Custom software solutions and process automation</p>
-							</div>
-						</a>
-						<a href="#/services/marketing" class="service-button" style="text-decoration: none;">
-							<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
-								<h3 style="color: #333;">Marketing</h3>
-								<p style="color: #666;">Digital marketing and growth strategies</p>
-							</div>
-						</a>
-						<a href="#/services/consulting" class="service-button" style="text-decoration: none;">
-							<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
-								<h3 style="color: #333;">Consulting</h3>
-								<p style="color: #666;">Strategic technology consulting</p>
-							</div>
-						</a>
-						<a href="#/services/outsourcing" class="service-button" style="text-decoration: none;">
-							<div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); text-align: center; transition: transform 0.3s ease;">
-								<h3 style="color: #333;">Outsourcing</h3>
-								<p style="color: #666;">Dedicated development teams and resources</p>
-							</div>
-						</a>
-					</div>
-				</section>
+          <!-- Logo and Tagline -->
+          <div style="
+                width: 950px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+              ">
+            <img src="assets/images/dunosis-logo.png" alt="Dunosis Logo" style="margin-bottom: 1rem" />
+            <p style="font-size: 1.25rem; margin-top: 1rem">
+              Services and Pricing Presentation
+            </p>
+          </div>
 
-				<!-- Detailed Service Slides -->
-				<!-- Web Development Service -->
-				<section id="web-dev" data-background-color="#f5f5f5">
-					<div style="padding: 2rem;">
-						<h2 style="color: #333;">Web Development</h2>
-						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-							<div>
-								<h3 style="color: #333;">What We Offer</h3>
-								<ul style="color: #666; list-style-type: none; padding: 0;">
-									<li style="margin-bottom: 1rem;">✓ Custom Website Development</li>
-									<li style="margin-bottom: 1rem;">✓ E-commerce Solutions</li>
-									<li style="margin-bottom: 1rem;">✓ Progressive Web Apps</li>
-									<li style="margin-bottom: 1rem;">✓ CMS Development</li>
-								</ul>
-							</div>
-							<div>
-								<h3 style="color: #333;">Technologies</h3>
-								<ul style="color: #666; list-style-type: none; padding: 0;">
-									<li style="margin-bottom: 1rem;">✓ React & Next.js</li>
-									<li style="margin-bottom: 1rem;">✓ Node.js & Express</li>
-									<li style="margin-bottom: 1rem;">✓ WordPress & Shopify</li>
-									<li style="margin-bottom: 1rem;">✓ Cloud Infrastructure</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
+          <!-- Right Bars -->
+          <div style="
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                width: 100%;
+                gap: 0.5rem;
+              ">
+            <div style="width: 20%; height: 1rem; background-color: #c62a2c"></div>
+            <div style="width: 40%; height: 1rem; background-color: #ecb731"></div>
+            <div style="width: 60%; height: 1rem; background-color: #029a4d"></div>
+          </div>
+        </div>
+      </section>
 
-				<!-- Software & Automation Service -->
-				<section id="software-automation" data-background-color="#f5f5f5">
-					<div style="padding: 2rem;">
-						<h2 style="color: #333;">Software & Automation</h2>
-						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-							<div>
-								<h3 style="color: #333;">Solutions</h3>
-								<ul style="color: #666; list-style-type: none; padding: 0;">
-									<li style="margin-bottom: 1rem;">✓ Custom Software Development</li>
-									<li style="margin-bottom: 1rem;">✓ Business Process Automation</li>
-									<li style="margin-bottom: 1rem;">✓ API Development</li>
-									<li style="margin-bottom: 1rem;">✓ System Integration</li>
-								</ul>
-							</div>
-							<div>
-								<h3 style="color: #333;">Technologies</h3>
-								<ul style="color: #666; list-style-type: none; padding: 0;">
-									<li style="margin-bottom: 1rem;">✓ Python & Django</li>
-									<li style="margin-bottom: 1rem;">✓ Java & Spring Boot</li>
-									<li style="margin-bottom: 1rem;">✓ .NET Core</li>
-									<li style="margin-bottom: 1rem;">✓ RPA Tools</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
+      <section data-background-color="#f5f5f5" style="display: flex; align-items: center; justify-content: center">
+        <!-- section Who We Are -->
+        <section>
+          <div style="
+                grid-template-columns: 50% 50%;
+                display: grid;
+                height: 100%;
+              ">
+            <!-- Left Column -->
+            <div style="grid-template-rows: 1fr 1fr; display: grid; gap: 2rem">
+              <!-- Vertical Bars -->
+              <div class="vertical-bars">
+                <div class="bar-1 bg-blue"></div>
+                <div class="bar-2 bg-blue"></div>
+                <div class="bar-3 bg-blue"></div>
+                <div class="bar-4 bg-blue"></div>
+              </div>
+              <div style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  ">
+                <h1 class="big-text text-blue align-left">
+                  Who <br />We Are
+                </h1>
+              </div>
+            </div>
 
-				<!-- Marketing Service -->
-				<section id="marketing" data-background-color="#f5f5f5">
-					<div style="padding: 2rem;">
-						<h2 style="color: #333;">Marketing Services</h2>
-						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-							<div>
-								<h3 style="color: #333;">Digital Marketing</h3>
-								<ul style="color: #666; list-style-type: none; padding: 0;">
-									<li style="margin-bottom: 1rem;">✓ SEO Optimization</li>
-									<li style="margin-bottom: 1rem;">✓ Social Media Marketing</li>
-									<li style="margin-bottom: 1rem;">✓ Content Marketing</li>
-									<li style="margin-bottom: 1rem;">✓ Email Marketing</li>
-								</ul>
-							</div>
-							<div>
-								<h3 style="color: #333;">Analytics & Strategy</h3>
-								<ul style="color: #666; list-style-type: none; padding: 0;">
-									<li style="margin-bottom: 1rem;">✓ Market Research</li>
-									<li style="margin-bottom: 1rem;">✓ Performance Analytics</li>
-									<li style="margin-bottom: 1rem;">✓ Growth Strategy</li>
-									<li style="margin-bottom: 1rem;">✓ Brand Development</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
+            <!-- Right Column -->
+            <div style="
+                  grid-template-rows: 70% 30%;
+                  display: grid;
+                  justify-content: flex-end;
+                ">
+              <div style="
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    width: 70%;
+                    justify-content: flex-end;
+                  ">
+                <h2>Dunosis llc</h2>
+                <p style="width: 80%;">
+                  Is a <strong>Chicago</strong> and
+                  <strong>Santa Cruz, Bolivia</strong> based comany.
+                  <br /><br />
+                  We offer web development software development, marketing,
+                  consulting and outsourcing services.
+                </p>
+              </div>
+              <!-- Horizontal Bars -->
+              <div class="horizontal-bars">
+                <div class="bar-1 bg-blue"></div>
+                <div class="bar-2 bg-blue"></div>
+                <div class="bar-3 bg-blue"></div>
+                <div class="bar-4 bg-blue"></div>
+              </div>
+            </div>
+          </div>
+        </section>
 
-				<!-- Consulting Service -->
-				<section id="consulting" data-background-color="#f5f5f5">
-					<div style="padding: 2rem;">
-						<h2 style="color: #333;">Consulting Services</h2>
-						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-							<div>
-								<h3 style="color: #333;">Strategic Consulting</h3>
-								<ul style="color: #666; list-style-type: none; padding: 0;">
-									<li style="margin-bottom: 1rem;">✓ Digital Transformation</li>
-									<li style="margin-bottom: 1rem;">✓ Technology Roadmap</li>
-									<li style="margin-bottom: 1rem;">✓ Process Optimization</li>
-									<li style="margin-bottom: 1rem;">✓ Risk Assessment</li>
-								</ul>
-							</div>
-							<div>
-								<h3 style="color: #333;">Expertise Areas</h3>
-								<ul style="color: #666; list-style-type: none; padding: 0;">
-									<li style="margin-bottom: 1rem;">✓ Cloud Architecture</li>
-									<li style="margin-bottom: 1rem;">✓ Security Consulting</li>
-									<li style="margin-bottom: 1rem;">✓ DevOps Strategy</li>
-									<li style="margin-bottom: 1rem;">✓ Agile Transformation</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
+        <!-- Marketing Team Vertical Slide -->
+        <section>
+          <h2 style="color: #333; margin-bottom: 2rem">Marketing Team</h2>
+          <div style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+              ">
+            <div style="text-align: center">
+              <img src="assets/images/team/marketing1.jpg" alt="Sarah Johnson" style="
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 1rem;
+                  " />
+              <h3 style="color: #333">Sarah Johnson</h3>
+              <p style="color: #666">Marketing Director</p>
+              <p style="color: #666; font-size: 0.9rem">
+                10+ years of digital marketing expertise, specializing in B2B
+                strategies.
+              </p>
+            </div>
+            <div style="text-align: center">
+              <img src="assets/images/team/marketing2.jpg" alt="Michael Chen" style="
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 1rem;
+                  " />
+              <h3 style="color: #333">Michael Chen</h3>
+              <p style="color: #666">Content Strategist</p>
+              <p style="color: #666; font-size: 0.9rem">
+                Expert in creating engaging content and managing social media
+                campaigns.
+              </p>
+            </div>
+            <div style="text-align: center">
+              <img src="assets/images/team/marketing3.jpg" alt="Emma Davis" style="
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 1rem;
+                  " />
+              <h3 style="color: #333">Emma Davis</h3>
+              <p style="color: #666">Brand Manager</p>
+              <p style="color: #666; font-size: 0.9rem">
+                Passionate about building strong brand identities and market
+                positioning.
+              </p>
+            </div>
+          </div>
+        </section>
 
-				<!-- Outsourcing Service -->
-				<section id="outsourcing" data-background-color="#f5f5f5">
-					<div style="padding: 2rem;">
-						<h2 style="color: #333;">Outsourcing Services</h2>
-						<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem;">
-							<div>
-								<h3 style="color: #333;">Dedicated Teams</h3>
-								<ul style="color: #666; list-style-type: none; padding: 0;">
-									<li style="margin-bottom: 1rem;">✓ Full-Stack Development</li>
-									<li style="margin-bottom: 1rem;">✓ QA & Testing</li>
-									<li style="margin-bottom: 1rem;">✓ DevOps Teams</li>
-									<li style="margin-bottom: 1rem;">✓ Support & Maintenance</li>
-								</ul>
-							</div>
-							<div>
-								<h3 style="color: #333;">Engagement Models</h3>
-								<ul style="color: #666; list-style-type: none; padding: 0;">
-									<li style="margin-bottom: 1rem;">✓ Dedicated Resources</li>
-									<li style="margin-bottom: 1rem;">✓ Project-Based</li>
-									<li style="margin-bottom: 1rem;">✓ Time & Materials</li>
-									<li style="margin-bottom: 1rem;">✓ Managed Services</li>
-								</ul>
-							</div>
-						</div>
-					</div>
-				</section>
-			</div>
-		</div>
+        <!-- Development Team Vertical Slide -->
+        <section>
+          <h2 style="color: #333; margin-bottom: 2rem">Development Team</h2>
+          <div style="
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 2rem;
+              ">
+            <div style="text-align: center">
+              <img src="assets/images/team/dev1.jpg" alt="Alex Turner" style="
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 1rem;
+                  " />
+              <h3 style="color: #333">Alex Turner</h3>
+              <p style="color: #666">Lead Developer</p>
+              <p style="color: #666; font-size: 0.9rem">
+                Full-stack developer with expertise in cloud architecture and
+                scalable solutions.
+              </p>
+            </div>
+            <div style="text-align: center">
+              <img src="assets/images/team/dev2.jpg" alt="Maria Garcia" style="
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 1rem;
+                  " />
+              <h3 style="color: #333">Maria Garcia</h3>
+              <p style="color: #666">Frontend Specialist</p>
+              <p style="color: #666; font-size: 0.9rem">
+                UI/UX expert focused on creating intuitive and responsive web
+                applications.
+              </p>
+            </div>
+            <div style="text-align: center">
+              <img src="assets/images/team/dev3.jpg" alt="James Wilson" style="
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    object-fit: cover;
+                    margin-bottom: 1rem;
+                  " />
+              <h3 style="color: #333">James Wilson</h3>
+              <p style="color: #666">Backend Engineer</p>
+              <p style="color: #666; font-size: 0.9rem">
+                Database optimization and API development specialist with
+                security focus.
+              </p>
+            </div>
+          </div>
+        </section>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+      </section>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+
+      <!-- Services Overview Section -->
+      <section data-background-color="#f5f5f5">
+        <div style="
+                grid-template-columns: 40% 60%;
+                display: grid;
+              ">
+
+          <!-- Left Column -->
+          <div style="
+                  grid-template-rows: 70% 30%;
+                  width: 100%;
+                  display: grid;
+                ">
+
+            <div class="list" style="margin-left: 3rem;">
+              <ul style="font-size: 23pt !important;">
+                <li style="margin-bottom: 1rem">✓ Web Development</li>
+                <li style="margin-bottom: 1rem">✓ Software development</li>
+                <li style="margin-bottom: 1rem">✓ Marketing</li>
+                <li style="margin-bottom: 1rem">✓ Consulting</li>
+                <li style="margin-bottom: 1rem">✓ Outsourcing</li>
+              </ul>
+            </div>
+            <!-- Horizontal Bars -->
+            <div class="horizontal-bars justify-content-right align-start ">
+              <div class="bar-1 bg-green"></div>
+              <div class="bar-2 bg-green"></div>
+              <div class="bar-3 bg-green"></div>
+              <div class="bar-4 bg-green"></div>
+            </div>
+          </div>
+          <!-- Right Column -->
+          <div style="grid-template-rows: 1fr 1fr; display: grid; gap: 2rem">
+            <!-- Vertical Bars -->
+            <div class="vertical-bars-right">
+              <div class="bar-1 bg-green"></div>
+              <div class="bar-2 bg-green"></div>
+              <div class="bar-3 bg-green"></div>
+              <div class="bar-4 bg-green"></div>
+            </div>
+            <div style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  ">
+              <h1 class="big-text text-green align-right">
+                Our <br />Services
+              </h1>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- Web Development Service -->
+      <section data-background-color="#f5f5f5">
+        <div style="
+                grid-template-columns: 50% 50%;
+                display: grid;
+                height: 100%;
+              ">
+          <!-- Left Column -->
+          <div style="grid-template-rows: 1fr 1fr; display: grid; gap: 2rem">
+            <!-- Vertical Bars -->
+            <div class="vertical-bars">
+              <div class="bar-1 bg-yellow"></div>
+              <div class="bar-2 bg-yellow"></div>
+              <div class="bar-3 bg-yellow"></div>
+              <div class="bar-4 bg-yellow"></div>
+            </div>
+            <div style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  ">
+              <h1 class="big-text text-yellow align-left">
+                Web <br />Development
+              </h1>
+            </div>
+          </div>
+
+          <!-- Right Column -->
+          <div style="
+                  grid-template-rows: 70% 30%;
+                  display: grid;
+                  justify-content: flex-end;
+                ">
+            <div style="
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    width: 70%;
+                    justify-content: flex-end;
+                  ">
+              <p style="width: 90%; margin-bottom: 20%;">
+                We create <strong>customizable websites</strong> from scratch,
+                with dedicated code and exactly how you need it.<br /><br />
+                We offer <strong>monthly payments</strong> or <br />
+                <strong>one time payments</strong> on our plants.
+              </p>
+            </div>
+            <!-- Horizontal Bars -->
+            <div class="horizontal-bars">
+              <div class="bar-1 bg-yellow" style="width: 15%;"></div>
+              <div class="bar-2 bg-yellow" style="width: 15%;"></div>
+              <div class="bar-3 bg-yellow" style="width: 15%;"></div>
+              <div class="bar-4 bg-yellow" style="width: 15%;"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- Web Development Plans -->
+      <section data-background-color="#f5f5f5">
+        <div style="display: grid; grid-template-rows: 15% 50% 35%; width: 100%; gap: 3rem;">
+          <div style="display: grid; grid-template-columns: 60% 40%; justify-content: center; align-items: center;">
+            <div style="display: flex; justify-content: start; align-items: center;">
+              <h1 class="big-text text-yellow align-left" style="font-size: 25pt; justify-content: center;">
+                Web Development Plans
+              </h1>
+            </div>
+            <div class="horizontal-bars-sm">
+              <div class="bar-1 bg-yellow"></div>
+              <div class="bar-2 bg-yellow"></div>
+              <div class="bar-3 bg-yellow"></div>
+            </div>
+
+          </div>
+          <div
+            style="display: grid; grid-template-columns: repeat(4, 1fr); justify-content: center; align-items: start;">
+            <!-- Lite Package -->
+            <div style="display: grid; grid-template-columns: 3% 97%;">
+
+              <div style="display: flex; justify-content: end; align-items: center;">
+                <div style="display: flex; background-color: transparent; height: 100%; width: 1px;">
+                </div>
+              </div>
+
+              <div>
+                <h2
+                  style="font-size: 15pt; font-weight: 500 !important; line-height: 1.5rem; margin-bottom: 0; margin-left: 1rem; letter-spacing: 1pt; text-align: start;">
+                  Lite<br /> Package
+                </h2>
+                <div style="padding: 10% 10% 0%;">
+                  <ul style="font-family: 'Outfit'; font-size: 10pt !important; margin-left: 0">
+                    <li>Minimal customizable design</li>
+                    <li>Very limited animations</li>
+                    <li>1 page</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Basic Package -->
+            <div style="display: grid; grid-template-columns: 3% 97%;">
+              <div style="display: flex; justify-content: end; align-items: center;">
+                <div style="display: flex; background-color: #333; height: 100%; width: 1px;">
+                </div>
+              </div>
+              <div>
+                <h2
+                  style="font-size: 15pt; font-weight: 500 !important; line-height: 1.5rem; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                  Basic <br /> Package</h2>
+                <div style="padding: 10% 10% 0%;">
+                  <ul style="font-family: 'Outfit';; font-size: 10pt !important; margin-left: 1rem;">
+                    <li>Basic customizable design</li>
+                    <li>Limited animations and elements</li>
+                    <li>Database storage</li>
+                    <li>Minor integrations with 3rd party sistems</li>
+                    <li>3 pages</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Mid Package -->
+            <div style="display: grid; grid-template-columns: 3% 97%;">
+              <div style="display: flex; justify-content: end; align-items: center;">
+                <div style="display: flex; background-color: #333; height: 100%; width: 1px;">
+                </div>
+              </div>
+              <div>
+                <h2
+                  style="font-size: 15pt; font-weight: 500 !important; line-height: 1.5rem; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                  Mid<br /> Package</h2>
+                <div style="padding: 10% 10% 0%;">
+                  <ul style="font-family: 'Outfit'; font-size: 10pt !important; margin-left: 1rem;">
+                    <li>Enhanced customizable design</li>
+                    <li>Database storage</li>
+                    <li>AWS Storage Bucket 30 GB</li>
+                    <li>Enhanced animations and elements</li>
+                    <li>Integrations with 3rd party sistems</li>
+                    <li>One landing page</li>
+                    <li>5 pages</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Pro Package -->
+            <div style="display: grid; grid-template-columns: 3% 97%;">
+              <div style="display: flex; justify-content: end; align-items: center;">
+                <div style="display: flex; background-color: #333; height: 100%; width: 1px;">
+                </div>
+              </div>
+              <div>
+                <h2
+                  style="font-size: 10pt; font-weight: 500 !important; line-height: 1.5rem; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                  pro<br /> Package</h2>
+                <div style="padding: 10% 10% 0%;">
+                  <ul style="font-family: 'Outfit'; font-size: 10pt !important; margin-left: 1rem;">
+                    <li>Advanced customizable design</li>
+                    <li>Database storage</li>
+                    <li>AWS Storage Bucket 50 GB</li>
+                    <li>Advanced animations and elements</li>
+                    <li>Advanced Integrations with 3rd party sistems</li>
+                    <li>One landing page</li>
+                    <li>50 pages</li>
+                  </ul>
+                </div>
+              </div>
+              <div style="display: flex; justify-content: end; align-items: center;">
+                <div style="display: flex; background-color: transparent; height: 100%; width: 1px;">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            style="display: flex; flex-direction: column; align-items: start; text-align: start; justify-content: start; gap: 0.5rem; margin-left: 2rem;">
+            <h2
+              style="font-weight: 600 !important; font-size: 18pt !important; line-height: 1.5rem; letter-spacing: 1pt;">
+              Customizable
+              <br />
+              Package
+            </h2>
+            <li style="font-size: 12pt; font-family: 'Outfit';">Create your own plan.</li>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Software Development Service -->
+      <section data-background-color="#f5f5f5">
+        <div style="
+                grid-template-columns: 20% 80%;
+                display: grid;
+              ">
+
+          <!-- Left Column -->
+          <div style="
+                  grid-template-rows: 1fr;
+                  width: 100%;
+                  display: grid;
+                ">
+
+
+            <div
+              style="position: absolute; top: 10%; left: 10%; font-size: 14pt; font-family: 'Outfit'; font-weight: 400; text-align: left;">
+              We create a <strong>specific software systems</strong> for <br />
+              your business that could be embedded on<br />
+              your website or accessed through <br />
+              a stand-alone web application. <br /><br />
+              Sales module, AI chatbots, advanced<br />
+              automation, task management,<br />
+              special customizable profiles,<br />
+              interactive forms, restaurant<br />
+              modules or any custom<br /> systems for you business.
+            </div>
+            <!-- Horizontal Bars -->
+            <div class="horizontal-bars justify-content-right align-start ">
+              <div class="bar-1 bg-red"></div>
+              <div class="bar-2 bg-red"></div>
+              <div class="bar-3 bg-red"></div>
+              <div class="bar-4 bg-red"></div>
+            </div>
+          </div>
+          <!-- Right Column -->
+          <div style="grid-template-rows: 1fr 1fr; display: grid; gap: 2rem">
+            <!-- Vertical Bars -->
+            <div class="vertical-bars-right">
+              <div class="bar-1 bg-red"></div>
+              <div class="bar-2 bg-red"></div>
+              <div class="bar-3 bg-red"></div>
+              <div class="bar-4 bg-red"></div>
+            </div>
+            <div style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  ">
+              <h1 class="big-text text-red align-right" style="font-size: 70pt; line-height: 1.2;">
+                Software <br />Development
+              </h1>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- Marketing Service -->
+      <section data-background-color="#f5f5f5">
+        <div style="
+                grid-template-rows: 70% 30%;
+                display: grid;
+                height: 100%;
+                gap: 2rem;
+              ">
+          <!-- Left Column -->
+          <div style="grid-template-columns: 1fr 1fr; display: grid;">
+            <!-- Vertical Bars -->
+            <div class="vertical-bars">
+              <div class="bar-1 bg-violet"></div>
+              <div class="bar-2 bg-violet"></div>
+              <div class="bar-3 bg-violet"></div>
+              <div class="bar-4 bg-violet"></div>
+            </div>
+            <div style="
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    width: 80%;
+                    justify-content: flex-end;
+                  ">
+              <p>
+                Everything you need for your project to
+                <strong>succeed.</strong> Within our plans, we offer <strong>marketing
+                  analysis</strong> and <strong>strategy</strong> before we start creating
+                the <strong>graphic design</strong> and <strong>videos</strong> your need.
+                <br /> <br />
+                From <strong>branding</strong> to <strong>social media management,</strong>
+                to the final step of <strong>community management.</strong>
+                We view all as a complete process to ultimately
+                help you <strong>increase your sales.</strong> We offer <strong>social media plans</strong>
+                or you can <strong>create your own</strong> based on what your need.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Right Column -->
+          <div style="
+                  grid-template-columns: 80% 20%;
+                  display: grid;
+                  justify-content: flex-end;
+                ">
+            <div style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  ">
+              <h1 class="big-text text-violet align-left">
+                Marketing
+              </h1>
+            </div>
+            <!-- Horizontal Bars -->
+            <div class="horizontal-bars">
+              <div class="bar-1 bg-violet"></div>
+              <div class="bar-2 bg-violet"></div>
+              <div class="bar-3 bg-violet"></div>
+              <div class="bar-4 bg-violet"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Social Media Plans -->
+      <section data-background-color="#f5f5f5" style="width: 100% !important;">
+        <div style="display: grid; grid-template-rows: 15% 50% 35%; width: 100%; gap: 3rem;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; justify-content: center; align-items: center;">
+            <div style="display: flex; justify-content: start; align-items: center;">
+              <h1 class="big-text text-violet align-left" style="font-size: 25pt; justify-content: center;">
+                Social Media Plans
+              </h1>
+            </div>
+            <div class="horizontal-bars-sm">
+              <div class="bar-1 bg-violet"></div>
+              <div class="bar-2 bg-violet"></div>
+              <div class="bar-3 bg-violet"></div>
+            </div>
+
+          </div>
+          <div
+            style="display: grid; grid-template-columns: repeat(4, 1fr); justify-content: center; align-items: start;">
+            <!-- Basic Plan -->
+            <div style="display: grid; grid-template-columns: 3% 97%; justify-content: center;">
+              <div style="display: flex; justify-content: end; align-items: center;">
+                <div style="display: flex; background-color: transparent; height: 100%; width: 1px;">
+                </div>
+              </div>
+
+              <div>
+                <h2
+                  style="font-size: 15pt; font-weight: 500 !important; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                  Basic
+                </h2>
+                <div style="padding: 10% 10% 0%;">
+                  <ul style="font-family: 'Outfit'; font-size: 10pt !important; margin-left: 1rem;">
+                    <li>4 high-quality posts per month (1 per week)</li>
+                    <li>3 engaging story-format posts</li>
+                    <li>One vertical video per month (Reels/Tik Tok style)</li>
+                    <li>Basic content strategy and scheduling</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Mid Plan -->
+            <div style="display: grid; grid-template-columns: 3% 97%; justify-content: start;">
+              <div style="display: flex; justify-content: end; align-items: start;">
+                <div style="display: flex; background-color: #333; height: 100%; width: 1px;">
+                </div>
+              </div>
+              <div>
+                <h2
+                  style="font-size: 15pt; font-weight: 500 !important; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                  Mid</h2>
+                <div style="padding: 10% 10% 0%;">
+                  <ul style="font-family: 'Outfit'; font-size: 10pt !important;  margin-left: 1rem;">
+                    <li>8 high-quality posts per month (2 per week)</li>
+                    <li>6 engaging story-format posts</li>
+                    <li>Two vertical video per month (Reels/Tik Tok style)</li>
+                    <li>Enhanced content strategy and sheduling</li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Pro Plan -->
+            <div style="display: grid; grid-template-columns: 3% 97%; justify-content: start;">
+              <div style="display: flex; justify-content: end; align-items: start;">
+                <div style="display: flex; background-color: #333; height: 100%; width: 1px;">
+                </div>
+              </div>
+              <div>
+                <h2
+                  style="font-size: 15pt; font-weight: 500 !important; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                  Pro</h2>
+                <div style="padding: 10% 10% 0%;">
+                  <ul style="font-family: 'Outfit'; font-size: 10pt !important; margin-left: 1rem;">
+                    <li>12 high-quality posts per month (3 per week)</li>
+                    <li>8 engaging story-format posts</li>
+                    <li>Three vertical video per month (Reels/Tik Tok style)</li>
+                    <li>Advanced content strategy and scheduling</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Aditional Plan -->
+            <div style="display: grid; grid-template-columns: 3% 97%; justify-content: start;">
+              <div style="display: flex; justify-content: end; align-items: center;">
+                <div style="display: flex; background-color: #333; height: 100%; width: 1px;">
+                </div>
+              </div>
+              <div>
+                <h2
+                  style="font-size: 10pt; font-weight: 500 !important; margin-bottom: 0; line-height: 1.5rem; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                  Aditional<br /> Services</h2>
+                <div style="padding: 10% 10% 0%;">
+                  <ul style="font-family: 'Outfit'; font-size: 10pt !important;  margin-left: 1rem;">
+                    <li>Social media graphic design</li>
+                    <li>Flyers and signs design</li>
+                    <li>Menu design</li>
+                    <li>Photo shooting</li>
+                    <li>High-quality video recording</li>
+                    <li>Video editing</li>
+                    <li>Business cards designs</li>
+                    <li>Community management</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div
+            style="display: flex; flex-direction: column; align-items: start; text-align: start; justify-content: start; gap: 0.5rem;">
+
+            <h2
+              style="font-weight: 600 !important; font-size: 18pt !important; line-height: 1.5rem; letter-spacing: 1pt; margin-left: 2rem;">
+              Create <br />
+              your Own</h2>
+            <ul style="list-style: disc; margin-left: 3rem;">
+              <li style="
+                font-size: 12pt;
+                font-family: 'Outfit';
+                text-indent: -0.2em;
+                padding-left: 0.5em;
+              ">
+                Customize your social media plan based on your brand needs, tell<br>
+                us what you need and we create a specific plan for you.
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+
+
+      <!-- Consulting Service -->
+      <section data-background-color="#f5f5f5">
+        <div style="
+                grid-template-rows: 70% 30%;
+                display: grid;
+                gap: 2rem;
+              ">
+
+          <!-- Left Column -->
+          <div style="
+                  grid-template-columns: 70% 30%;
+                  width: 100%;
+                  display: grid;
+                ">
+
+            <p style="text-align: left; margin-left: 3rem; width: 66%; margin-top: 3rem;">
+              We are <strong>experts</strong> in business management,<br />
+              marketing, sales and engineering.<br /><br />
+              We offer <strong>specialized consulting services</strong> for every
+              area of your business. We analyze your specific<br />
+              case and provide you <strong>real</strong> and <strong>concrete solutions</strong><br />
+              for you to implement in your project. Cost analysis,
+              sales projections, specific process solutions or<br />
+              specific engineering solutions.<br />
+              Tell us about your project and we will create a specific
+              plan for you.
+            </p>
+
+            <!-- Vertical Bars -->
+            <div class="vertical-bars-right">
+              <div class="bar-1 bg-blue"></div>
+              <div class="bar-2 bg-blue"></div>
+              <div class="bar-3 bg-blue"></div>
+              <div class="bar-4 bg-blue"></div>
+            </div>
+          </div>
+          <!-- Right Column -->
+          <div style="grid-template-columns: 1fr 1fr; display: grid; gap: 2rem">
+            <!-- Horizontal Bars -->
+            <div class="horizontal-bars justify-content-right align-start ">
+              <div class="bar-1 bg-blue"></div>
+              <div class="bar-2 bg-blue"></div>
+              <div class="bar-3 bg-blue"></div>
+              <div class="bar-4 bg-blue"></div>
+            </div>
+            <div style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  ">
+              <h1 class="big-text text-blue align-right">
+                Consulting
+              </h1>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <!-- Outsourcing Service -->
+      <section data-background-color="#f5f5f5">
+        <div style="
+                grid-template-rows: 70% 30%;
+                display: grid;
+                height: 100%;
+                gap: 2rem;
+              ">
+          <!-- Left Column -->
+          <div style="grid-template-columns: 1fr 1fr; display: grid;">
+            <!-- Vertical Bars -->
+            <div class="vertical-bars">
+              <div class="bar-1 bg-green"></div>
+              <div class="bar-2 bg-green"></div>
+              <div class="bar-3 bg-green"></div>
+              <div class="bar-4 bg-green"></div>
+            </div>
+            <div style="
+                    display: flex;
+                    flex-direction: column;
+                    text-align: left;
+                    width: 80%;
+                    justify-content: flex-end;
+                  ">
+              <p>
+                If you need a specific service, we can find the
+                perfect candidate and/or solution for you.<br /><br />
+                We work with our <strong>Bolivian team</strong> that can help
+                you accomplish your goals with a more
+                affordable perspective. Or maybe you need a
+                specific person for your team, your can find it
+                with us.<br /><br />
+                Remote solutions for your business with
+                qualified experienced professionals.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Right Column -->
+          <div style="
+                  grid-template-columns: 90% 10%;
+                  display: grid;
+                  justify-content: flex-end;
+                ">
+            <div style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  ">
+              <h1 class="big-text text-green align-left" style="font-size: 65pt;">
+                Outsourcing
+              </h1>
+            </div>
+            <!-- Horizontal Bars -->
+            <div class="horizontal-bars">
+              <div class="bar-1 bg-green"></div>
+              <div class="bar-2 bg-green"></div>
+              <div class="bar-3 bg-green"></div>
+              <div class="bar-4 bg-green"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Connect Us -->
+      <section data-background-color="#f5f5f5">
+        <div style="
+                grid-template-columns: 30% 70%;
+                display: grid;
+              ">
+
+          <!-- Left Column -->
+          <div style="
+                  grid-template-rows: 1fr;
+                  width: 100%;
+                  display: grid;
+                ">
+
+
+            <div style="margin-top: 10%;">
+              <p>
+                info@dunosis.com
+              </p>
+              <p>
+                +1 (773) 202-2074
+              </p>
+              <h2 style="margin-top: 10%;">Dunosis llc</h2>
+            </div>
+
+            <!-- Horizontal Bars -->
+            <div class="horizontal-bars justify-content-right align-start ">
+              <div class="bar-1 bg-yellow"></div>
+              <div class="bar-2 bg-yellow"></div>
+              <div class="bar-3 bg-yellow"></div>
+              <div class="bar-4 bg-yellow"></div>
+            </div>
+          </div>
+          <!-- Right Column -->
+          <div style="grid-template-rows: 1fr 1fr; display: grid; gap: 2rem">
+            <!-- Vertical Bars -->
+            <div class="vertical-bars-right">
+              <div class="bar-1 bg-yellow"></div>
+              <div class="bar-2 bg-yellow"></div>
+              <div class="bar-3 bg-yellow"></div>
+              <div class="bar-4 bg-yellow"></div>
+            </div>
+            <div style="
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-end;
+                  ">
+              <h1 class="big-text text-yellow align-right" style="font-size: 70pt; line-height: 1.2;">
+                Connect <br />With Us
+              </h1>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+    });
+  </script>
+</body>
+
 </html>
