@@ -133,11 +133,8 @@
       <section data-background-color="#f5f5f5" style="display: flex; align-items: center; justify-content: center">
         <!-- section Who We Are -->
         <section>
-          <div style="
-                grid-template-columns: 50% 50%;
-                display: grid;
-                height: 100%;
-              ">
+          <div class="template-50">
+
             <!-- Left Column -->
             <div style="grid-template-rows: 1fr 1fr; display: grid; gap: 2rem">
               <!-- Vertical Bars -->
@@ -152,7 +149,7 @@
                     flex-direction: column;
                     justify-content: flex-end;
                   ">
-                <h1 class="big-text text-blue align-left">
+                <h1 class="big-text text-blue text-left">
                   Who <br />We Are
                 </h1>
               </div>
@@ -308,10 +305,7 @@
 
       <!-- Services Overview Section -->
       <section data-background-color="#f5f5f5">
-        <div style="
-                grid-template-columns: 40% 60%;
-                display: grid;
-              ">
+        <div class="template-40">
 
           <!-- Left Column -->
           <div style="
@@ -320,13 +314,13 @@
                   display: grid;
                 ">
 
-            <div class="list" style="margin-left: 3rem;">
-              <ul style="font-size: 23pt !important;">
-                <li style="margin-bottom: 1rem">✓ Web Development</li>
-                <li style="margin-bottom: 1rem">✓ Software development</li>
-                <li style="margin-bottom: 1rem">✓ Marketing</li>
-                <li style="margin-bottom: 1rem">✓ Consulting</li>
-                <li style="margin-bottom: 1rem">✓ Outsourcing</li>
+            <div class="list">
+              <ul>
+                <li>✓ Web Development</li>
+                <li>✓ Software development</li>
+                <li>✓ Marketing</li>
+                <li>✓ Consulting</li>
+                <li>✓ Outsourcing</li>
               </ul>
             </div>
             <!-- Horizontal Bars -->
@@ -340,18 +334,18 @@
           <!-- Right Column -->
           <div style="grid-template-rows: 1fr 1fr; display: grid; gap: 2rem">
             <!-- Vertical Bars -->
-            <div class="vertical-bars-right">
-              <div class="bar-1 bg-green"></div>
-              <div class="bar-2 bg-green"></div>
-              <div class="bar-3 bg-green"></div>
+            <div class="vertical-bars vb-right">
               <div class="bar-4 bg-green"></div>
+              <div class="bar-3 bg-green"></div>
+              <div class="bar-2 bg-green"></div>
+              <div class="bar-1 bg-green"></div>
             </div>
             <div style="
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
                   ">
-              <h1 class="big-text text-green align-right">
+              <h1 class="big-text text-green text-right">
                 Our <br />Services
               </h1>
             </div>
@@ -363,11 +357,7 @@
 
       <!-- Web Development Service -->
       <section data-background-color="#f5f5f5">
-        <div style="
-                grid-template-columns: 50% 50%;
-                display: grid;
-                height: 100%;
-              ">
+        <div class="template-50">
           <!-- Left Column -->
           <div style="grid-template-rows: 1fr 1fr; display: grid; gap: 2rem">
             <!-- Vertical Bars -->
@@ -382,7 +372,7 @@
                     flex-direction: column;
                     justify-content: flex-end;
                   ">
-              <h1 class="big-text text-yellow align-left">
+              <h1 class="big-text text-yellow text-left">
                 Web <br />Development
               </h1>
             </div>
@@ -420,13 +410,12 @@
       </section>
 
 
-
       <!-- Web Development Plans -->
       <section data-background-color="#f5f5f5">
-        <div style="display: grid; grid-template-rows: 15% 50% 35%; width: 100%; gap: 3rem;">
-          <div style="display: grid; grid-template-columns: 60% 40%; justify-content: center; align-items: center;">
-            <div style="display: flex; justify-content: start; align-items: center;">
-              <h1 class="big-text text-yellow align-left" style="font-size: 25pt; justify-content: center;">
+        <div style="display: grid; grid-template-rows: 15% 60% 25%; width: 100%; gap: 2rem;">
+          <div class="template-60">
+            <div class="justify-content-left align-center">
+              <h1 class="medium-text text-yellow text-left justify-content-center">
                 Web Development Plans
               </h1>
             </div>
@@ -448,12 +437,11 @@
               </div>
 
               <div>
-                <h2
-                  style="font-size: 15pt; font-weight: 500 !important; line-height: 1.5rem; margin-bottom: 0; margin-left: 1rem; letter-spacing: 1pt; text-align: start;">
+                <h2 class="subtitle-plans">
                   Lite<br /> Package
                 </h2>
-                <div style="padding: 10% 10% 0%;">
-                  <ul style="font-family: 'Outfit'; font-size: 10pt !important; margin-left: 0">
+                <div class="list-md">
+                  <ul>
                     <li>Minimal customizable design</li>
                     <li>Very limited animations</li>
                     <li>1 page</li>
@@ -470,11 +458,10 @@
                 </div>
               </div>
               <div>
-                <h2
-                  style="font-size: 15pt; font-weight: 500 !important; line-height: 1.5rem; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                <h2 class="subtitle-plans">
                   Basic <br /> Package</h2>
-                <div style="padding: 10% 10% 0%;">
-                  <ul style="font-family: 'Outfit';; font-size: 10pt !important; margin-left: 1rem;">
+                <div class="list-md">
+                  <ul>
                     <li>Basic customizable design</li>
                     <li>Limited animations and elements</li>
                     <li>Database storage</li>
@@ -493,11 +480,10 @@
                 </div>
               </div>
               <div>
-                <h2
-                  style="font-size: 15pt; font-weight: 500 !important; line-height: 1.5rem; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                <h2 class="subtitle-plans">
                   Mid<br /> Package</h2>
-                <div style="padding: 10% 10% 0%;">
-                  <ul style="font-family: 'Outfit'; font-size: 10pt !important; margin-left: 1rem;">
+                <div class="list-md">
+                  <ul>
                     <li>Enhanced customizable design</li>
                     <li>Database storage</li>
                     <li>AWS Storage Bucket 30 GB</li>
@@ -518,11 +504,10 @@
                 </div>
               </div>
               <div>
-                <h2
-                  style="font-size: 10pt; font-weight: 500 !important; line-height: 1.5rem; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                <h2 class="subtitle-plans">
                   pro<br /> Package</h2>
-                <div style="padding: 10% 10% 0%;">
-                  <ul style="font-family: 'Outfit'; font-size: 10pt !important; margin-left: 1rem;">
+                <div class="list-md">
+                  <ul>
                     <li>Advanced customizable design</li>
                     <li>Database storage</li>
                     <li>AWS Storage Bucket 50 GB</li>
@@ -540,9 +525,8 @@
             </div>
           </div>
           <div
-            style="display: flex; flex-direction: column; align-items: start; text-align: start; justify-content: start; gap: 0.5rem; margin-left: 2rem;">
-            <h2
-              style="font-weight: 600 !important; font-size: 18pt !important; line-height: 1.5rem; letter-spacing: 1pt;">
+            style="display: grid !important; grid-template-rows: 1fr 1fr; align-items: start; text-align: start; justify-content: start; margin-left: 2rem;">
+            <h2 style="display: grid; font-weight: 600 !important; font-size: 18pt !important; letter-spacing: 1pt;">
               Customizable
               <br />
               Package
@@ -555,10 +539,7 @@
 
       <!-- Software Development Service -->
       <section data-background-color="#f5f5f5">
-        <div style="
-                grid-template-columns: 20% 80%;
-                display: grid;
-              ">
+        <div class="template-20">
 
           <!-- Left Column -->
           <div style="
@@ -591,18 +572,18 @@
           <!-- Right Column -->
           <div style="grid-template-rows: 1fr 1fr; display: grid; gap: 2rem">
             <!-- Vertical Bars -->
-            <div class="vertical-bars-right">
-              <div class="bar-1 bg-red"></div>
-              <div class="bar-2 bg-red"></div>
-              <div class="bar-3 bg-red"></div>
+            <div class="vertical-bars vb-right">
               <div class="bar-4 bg-red"></div>
+              <div class="bar-3 bg-red"></div>
+              <div class="bar-2 bg-red"></div>
+              <div class="bar-1 bg-red"></div>
             </div>
             <div style="
                     display: flex;
                     flex-direction: column;
                     justify-content: flex-end;
                   ">
-              <h1 class="big-text text-red align-right" style="font-size: 70pt; line-height: 1.2;">
+              <h1 class="big-text text-red text-right" style="font-size: 70pt; line-height: 1.2;">
                 Software <br />Development
               </h1>
             </div>
@@ -614,12 +595,7 @@
 
       <!-- Marketing Service -->
       <section data-background-color="#f5f5f5">
-        <div style="
-                grid-template-rows: 70% 30%;
-                display: grid;
-                height: 100%;
-                gap: 2rem;
-              ">
+        <div class="template-70">
           <!-- Left Column -->
           <div style="grid-template-columns: 1fr 1fr; display: grid;">
             <!-- Vertical Bars -->
@@ -663,7 +639,7 @@
                     flex-direction: column;
                     justify-content: flex-end;
                   ">
-              <h1 class="big-text text-violet align-left">
+              <h1 class="big-text text-violet text-left">
                 Marketing
               </h1>
             </div>
@@ -680,11 +656,11 @@
 
 
       <!-- Social Media Plans -->
-      <section data-background-color="#f5f5f5" style="width: 100% !important;">
+      <section data-background-color="#f5f5f5">
         <div style="display: grid; grid-template-rows: 15% 50% 35%; width: 100%; gap: 3rem;">
           <div style="display: grid; grid-template-columns: 1fr 1fr; justify-content: center; align-items: center;">
             <div style="display: flex; justify-content: start; align-items: center;">
-              <h1 class="big-text text-violet align-left" style="font-size: 25pt; justify-content: center;">
+              <h1 class="medium-text text-violet text-left">
                 Social Media Plans
               </h1>
             </div>
@@ -705,12 +681,11 @@
               </div>
 
               <div>
-                <h2
-                  style="font-size: 15pt; font-weight: 500 !important; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                <h2 class="subtitle-plans">
                   Basic
                 </h2>
-                <div style="padding: 10% 10% 0%;">
-                  <ul style="font-family: 'Outfit'; font-size: 10pt !important; margin-left: 1rem;">
+                <div class="list-md">
+                  <ul>
                     <li>4 high-quality posts per month (1 per week)</li>
                     <li>3 engaging story-format posts</li>
                     <li>One vertical video per month (Reels/Tik Tok style)</li>
@@ -728,11 +703,10 @@
                 </div>
               </div>
               <div>
-                <h2
-                  style="font-size: 15pt; font-weight: 500 !important; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                <h2 class="subtitle-plans">
                   Mid</h2>
-                <div style="padding: 10% 10% 0%;">
-                  <ul style="font-family: 'Outfit'; font-size: 10pt !important;  margin-left: 1rem;">
+                <div class="list-md">
+                  <ul>
                     <li>8 high-quality posts per month (2 per week)</li>
                     <li>6 engaging story-format posts</li>
                     <li>Two vertical video per month (Reels/Tik Tok style)</li>
@@ -750,11 +724,10 @@
                 </div>
               </div>
               <div>
-                <h2
-                  style="font-size: 15pt; font-weight: 500 !important; margin-bottom: 0; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                <h2 class="subtitle-plans">
                   Pro</h2>
-                <div style="padding: 10% 10% 0%;">
-                  <ul style="font-family: 'Outfit'; font-size: 10pt !important; margin-left: 1rem;">
+                <div class="list-md">
+                  <ul>
                     <li>12 high-quality posts per month (3 per week)</li>
                     <li>8 engaging story-format posts</li>
                     <li>Three vertical video per month (Reels/Tik Tok style)</li>
@@ -766,16 +739,15 @@
 
             <!-- Aditional Plan -->
             <div style="display: grid; grid-template-columns: 3% 97%; justify-content: start;">
-              <div style="display: flex; justify-content: end; align-items: center;">
+              <div class="flex justify-content-right align-center">
                 <div style="display: flex; background-color: #333; height: 100%; width: 1px;">
                 </div>
               </div>
               <div>
-                <h2
-                  style="font-size: 10pt; font-weight: 500 !important; margin-bottom: 0; line-height: 1.5rem; letter-spacing: 1pt; text-align: start; margin-left: 1rem;">
+                <h2 class="subtitle-plans">
                   Aditional<br /> Services</h2>
-                <div style="padding: 10% 10% 0%;">
-                  <ul style="font-family: 'Outfit'; font-size: 10pt !important;  margin-left: 1rem;">
+                <div class="list-md">
+                  <ul>
                     <li>Social media graphic design</li>
                     <li>Flyers and signs design</li>
                     <li>Menu design</li>
@@ -816,11 +788,7 @@
 
       <!-- Consulting Service -->
       <section data-background-color="#f5f5f5">
-        <div style="
-                grid-template-rows: 70% 30%;
-                display: grid;
-                gap: 2rem;
-              ">
+        <div class="template-70">
 
           <!-- Left Column -->
           <div style="
@@ -843,11 +811,11 @@
             </p>
 
             <!-- Vertical Bars -->
-            <div class="vertical-bars-right">
-              <div class="bar-1 bg-blue"></div>
-              <div class="bar-2 bg-blue"></div>
-              <div class="bar-3 bg-blue"></div>
+            <div class="vertical-bars vb-right">
               <div class="bar-4 bg-blue"></div>
+              <div class="bar-3 bg-blue"></div>
+              <div class="bar-2 bg-blue"></div>
+              <div class="bar-1 bg-blue"></div>
             </div>
           </div>
           <!-- Right Column -->
@@ -864,7 +832,7 @@
                     flex-direction: column;
                     justify-content: flex-end;
                   ">
-              <h1 class="big-text text-blue align-right">
+              <h1 class="big-text text-blue text-right">
                 Consulting
               </h1>
             </div>
@@ -877,12 +845,7 @@
 
       <!-- Outsourcing Service -->
       <section data-background-color="#f5f5f5">
-        <div style="
-                grid-template-rows: 70% 30%;
-                display: grid;
-                height: 100%;
-                gap: 2rem;
-              ">
+        <div class="template-70">
           <!-- Left Column -->
           <div style="grid-template-columns: 1fr 1fr; display: grid;">
             <!-- Vertical Bars -->
@@ -925,7 +888,7 @@
                     flex-direction: column;
                     justify-content: flex-end;
                   ">
-              <h1 class="big-text text-green align-left" style="font-size: 65pt;">
+              <h1 class="big-text text-green text-left" style="font-size: 65pt;">
                 Outsourcing
               </h1>
             </div>
@@ -943,10 +906,7 @@
 
       <!-- Connect Us -->
       <section data-background-color="#f5f5f5">
-        <div style="
-                grid-template-columns: 30% 70%;
-                display: grid;
-              ">
+        <div class="template-40">
 
           <!-- Left Column -->
           <div style="
@@ -977,7 +937,7 @@
           <!-- Right Column -->
           <div style="grid-template-rows: 1fr 1fr; display: grid; gap: 2rem">
             <!-- Vertical Bars -->
-            <div class="vertical-bars-right">
+            <div class="vertical-bars vb-right">
               <div class="bar-1 bg-yellow"></div>
               <div class="bar-2 bg-yellow"></div>
               <div class="bar-3 bg-yellow"></div>
@@ -988,7 +948,7 @@
                     flex-direction: column;
                     justify-content: flex-end;
                   ">
-              <h1 class="big-text text-yellow align-right" style="font-size: 70pt; line-height: 1.2;">
+              <h1 class="big-text text-yellow text-right" style="font-size: 70pt; line-height: 1.2;">
                 Connect <br />With Us
               </h1>
             </div>
@@ -1013,6 +973,43 @@
 
       // Learn about plugins: https://revealjs.com/plugins/
       plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+    });
+  </script>
+
+  <script>
+    Reveal.on('slidechanged', function (event) {
+      const currentSlide = event.currentSlide;
+      const vbars = currentSlide.querySelectorAll('.vertical-bars');
+      const hbars = currentSlide.querySelectorAll('.horizontal-bars');
+      const hbarssm = currentSlide.querySelectorAll('.horizontal-bars-sm');
+      const bigtext = currentSlide.querySelectorAll('.big-text');
+      const mediumtext = currentSlide.querySelectorAll('.medium-text');
+
+      vbars.forEach(bar => {
+        bar.classList.remove('scale-up-vertical-top');
+        void bar.offsetWidth;
+        bar.classList.add('scale-up-vertical-top');
+      });
+      hbars.forEach(bar => {
+        bar.classList.remove('scale-up-horizontal-right');
+        void bar.offsetWidth;
+        bar.classList.add('scale-up-horizontal-right');
+      });
+      hbarssm.forEach(bar => {
+        bar.classList.remove('scale-up-horizontal-right');
+        void bar.offsetWidth;
+        bar.classList.add('scale-up-horizontal-right');
+      });
+      bigtext.forEach(text => {
+        text.classList.remove('blur-in-expand');
+        void text.offsetWidth;
+        text.classList.add('blur-in-expand');
+      });
+      mediumtext.forEach(text => {
+        text.classList.remove('blur-in-expand');
+        void text.offsetWidth;
+        text.classList.add('blur-in-expand');
+      });
     });
   </script>
 </body>

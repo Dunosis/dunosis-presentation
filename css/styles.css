@@ -11,49 +11,100 @@
   --yellow: #ecb731;
 }
 
+/* ======================
+   Fonts
+====================== */
+body {
+  font-family: "Outfit", sans-serif;
+}
+
 h2,
 h3,
 h4,
 h5,
 h6 {
-  color: #000;
-  font-size: 18.5pt !important;
+  font: 900 18.5pt "Outfit", sans-serif !important;
+  color: var(--black);
   text-transform: uppercase;
-  font-weight: 900 !important;
-  font-family: "Outfit" !important;
   margin-bottom: 0 !important;
 }
 
-.big-text {
-  font-size: 77.5pt;
-  font-weight: 500 !important;
-  font-family: "Boldonse", sans-serif !important;
-  text-transform: uppercase;
-}
-
-.align-left {
-  text-align: left !important;
-}
-
-.align-center {
-  text-align: center !important;
-}
-
-.align-right {
-  text-align: right !important;
-}
-
 p {
-  font-size: 14pt !important;
-  color: #000 !important;
-  font-family: "Outfit";
-  font-weight: 400 !important;
+  font: 400 14pt "Outfit", sans-serif !important;
+  color: var(--black);
 }
 
 p strong {
   color: #333 !important;
   font-weight: 600 !important;
 }
+
+.big-text {
+  font-size: 77.5pt;
+  font-weight: 500 !important;
+  font-family: "Boldonse", sans-serif !important;
+  text-transform: uppercase !important;
+}
+
+.medium-text {
+  font: 500 25pt "Boldonse", sans-serif !important;
+  text-transform: uppercase;
+}
+.subtitle-plans {
+  font-size: 10pt;
+  font-weight: 500 !important;
+  margin-bottom: 0;
+  line-height: 1.5rem;
+  letter-spacing: 1pt !important;
+  text-align: start;
+  margin-left: 1rem !important;
+}
+
+/* ======================
+  Alignment utilities
+====================== */
+.flex {
+  display: flex;
+}
+.text-left {
+  text-align: left !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-right {
+  text-align: right !important;
+}
+
+.justify-content-left {
+  justify-content: flex-start !important;
+}
+
+.justify-content-center {
+  justify-content: center !important;
+}
+
+.justify-content-right {
+  justify-content: flex-end !important;
+}
+
+.align-start {
+  align-items: flex-start !important;
+}
+
+.align-center {
+  align-items: center !important;
+}
+
+.align-end {
+  align-items: flex-end !important;
+}
+
+/* ======================
+   Colors
+====================== */
 
 .bg-violet {
   background-color: var(--violet);
@@ -87,105 +138,171 @@ p strong {
   color: var(--yellow) !important;
 }
 
-body {
-  font-family: "Outfit";
+/* ======================
+   templates
+====================== */
+
+.template-20 {
+  grid-template-columns: 20% 80%;
+  display: grid;
+  gap: 1rem;
 }
 
-/* Vertical Bars left */
-.vertical-bars {
+.template-40 {
+  grid-template-columns: 40% 60%;
+  display: grid;
+  height: 100%;
+  gap: 1rem;
+}
+
+.template-50 {
+  grid-template-columns: 50% 50%;
+  display: grid;
+  height: 100%;
+}
+.template-60 {
+  grid-template-columns: 60% 40%;
+  display: grid;
+  height: 100%;
+  align-items: center;
+}
+
+.template-70 {
+  grid-template-rows: 70% 30%;
+  display: grid;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+/* ======================
+   Lists
+====================== */
+.list {
+  width: 100% !important;
   display: flex;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+  font-family: "Outfit", sans-serif !important;
+  margin-left: 3rem;
+}
+
+.list > ul {
+  width: 100% !important;
+  list-style: none;
+  font-size: 24px !important;
+  color: #666;
+}
+
+.list > ul > li {
+  margin-bottom: 1rem !important;
+}
+
+.list-md {
+  display: flex;
+  align-items: flex-end !important;
+  justify-content: flex-start !important;
+  font-family: "Outfit", sans-serif !important;
+  padding: 10% 10% 0%;
+}
+
+.list-md > ul {
+  width: 100% !important;
+  font-size: 14px !important;
+  color: #666;
+}
+
+.list-md > ul > li {
+  margin-bottom: 5px !important;
+}
+
+/* ======================
+  Vertical/horizontal bars
+====================== */
+
+.vertical-bars,
+.vertical-bars-right,
+.horizontal-bars,
+.horizontal-bars-sm {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.vertical-bars {
   flex-direction: row;
   align-items: flex-start;
-  gap: 0.5rem;
+}
+
+.vb-right {
+  justify-content: flex-end !important;
+}
+
+.horizontal-bars,
+.horizontal-bars-sm {
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.horizontal-bars-sm {
+  gap: 0.3rem;
+  justify-content: flex-start;
 }
 
 .vertical-bars > div {
   height: 100%;
 }
 
+.horizontal-bars > div,
+.horizontal-bars-sm > div {
+  width: 100%;
+}
+
+/* Common sizes for bars */
+.bar-1 {
+  --bar-size: 1.8rem;
+}
+.bar-2 {
+  --bar-size: 1.3rem;
+}
+.bar-3 {
+  --bar-size: 0.8rem;
+}
+.bar-4 {
+  --bar-size: 0.3rem;
+}
+
 .vertical-bars > .bar-1 {
-  width: 1.8rem;
+  width: var(--bar-size);
 }
 .vertical-bars > .bar-2 {
-  width: 1.3rem;
+  width: var(--bar-size);
 }
 .vertical-bars > .bar-3 {
-  width: 0.8rem;
+  width: var(--bar-size);
 }
 .vertical-bars > .bar-4 {
-  width: 0.3rem;
+  width: var(--bar-size);
 }
 
-/* Vertical Bars right */
-.vertical-bars-right {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-end !important;
-  justify-content: flex-end;
-  gap: 0.5rem;
-}
-
-.vertical-bars-right > div {
-  height: 100%;
-}
-
-.vertical-bars-right > .bar-1 {
-  width: 0.3rem;
-}
-.vertical-bars-right > .bar-2 {
-  width: 0.8rem;
-}
-.vertical-bars-right > .bar-3 {
-  width: 1.3rem;
-}
-.vertical-bars-right > .bar-4 {
-  width: 1.8rem;
-}
-
-/* Horizontal Bars */
-.horizontal-bars {
-  /* width: 100% !important; */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-end;
-  gap: 0.5rem;
-}
-
-.horizontal-bars > div {
-  width: 95%;
-}
-
-.horizontal-bars > .bar-1 {
+.horizontal-bars > .bar-1,
+.horizontal-bars-sm > .bar-1 {
   height: 0.3rem;
 }
-.horizontal-bars > .bar-2 {
+
+.horizontal-bars > .bar-2,
+.horizontal-bars-sm > .bar-2 {
   height: 0.8rem;
 }
-.horizontal-bars > .bar-3 {
+
+.horizontal-bars > .bar-3,
+.horizontal-bars-sm > .bar-3 {
   height: 1.3rem;
 }
+
 .horizontal-bars > .bar-4 {
   height: 1.8rem;
 }
 
-/* Horizontal Bars Small*/
-.horizontal-bars-sm {
-  /* width: 100% !important; */
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: flex-start;
-  gap: 0.3rem;
-}
-
-.horizontal-bars-sm > div {
-  width: 95%;
-}
-
-.horizontal-bars-sm > .bar-1 {
-  height: 0.3rem;
-}
 .horizontal-bars-sm > .bar-2 {
   height: 0.6rem;
 }
@@ -193,29 +310,50 @@ body {
   height: 1rem;
 }
 
-.justify-content-left {
-  justify-content: flex-start !important;
+/* ======================
+   Animations
+====================== */
+
+.scale-up-vertical-top {
+  animation: scale-up-vertical-top 1s;
+}
+@keyframes scale-up-vertical-top {
+  0% {
+    transform: scaleY(0.1);
+    transform-origin: center top;
+  }
+  100% {
+    transform: scaleY(1);
+    transform-origin: center top;
+  }
 }
 
-.justify-content-right {
-  justify-content: flex-end !important;
+.scale-up-horizontal-right {
+  animation: scale-up-horizontal-right 1s;
+}
+@keyframes scale-up-horizontal-right {
+  0% {
+    transform: scaleX(0.02);
+    transform-origin: right center;
+  }
+  100% {
+    transform: scaleX(1);
+    transform-origin: right center;
+  }
 }
 
-.align-start {
-  align-items: flex-start !important;
+.blur-in-expand {
+  animation: blur-in-expand 0.5s linear both;
 }
-
-.list {
-  width: 100% !important;
-  display: flex;
-  align-items: flex-end !important;
-  justify-content: flex-start !important;
-  font-family: "Outfit" !important;
-}
-
-.list > ul {
-  color: #666;
-  width: 100% !important;
-  font-size: 24pt !important;
-  list-style-type: none !important;
+@keyframes blur-in-expand {
+  0% {
+    transform: scale(0);
+    filter: blur(12px);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    filter: blur(0);
+    opacity: 1;
+  }
 }
