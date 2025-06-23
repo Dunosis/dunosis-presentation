@@ -216,6 +216,27 @@ p strong {
 }
 
 /* ======================
+  Main Slide
+====================== */
+/* left bars */
+.left-bars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+/* right bars */
+.right-bars {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+/* ======================
   Vertical/horizontal bars
 ====================== */
 
@@ -356,4 +377,37 @@ p strong {
     filter: blur(0);
     opacity: 1;
   }
+}
+
+@keyframes growBar {
+  from {
+    width: 0;
+  }
+  to {
+    width: var(--final-width);
+  }
+}
+
+@keyframes shrinkBar {
+  from {
+    width: var(--final-width);
+  }
+  to {
+    width: 0;
+  }
+}
+
+.main-bar {
+  width: 0;
+  animation-fill-mode: forwards;
+}
+
+.bar-delay-1 {
+  animation-delay: 0.1s;
+}
+.bar-delay-2 {
+  animation-delay: 0.3s;
+}
+.bar-delay-3 {
+  animation-delay: 0.5s;
 }

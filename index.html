@@ -77,7 +77,7 @@
 <body>
   <div class="reveal">
     <div class="slides">
-      <section data-background-color="#f5f5f5" style="
+      <section id="services-slide" data-background-color="#f5f5f5" style="
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -90,16 +90,13 @@
               width: 100%;
             ">
           <!-- Left Bars -->
-          <div style="
-                display: flex;
-                flex-direction: column;
-                align-items: flex-start;
-                width: 100%;
-                gap: 0.5rem;
-              ">
-            <div style="width: 20%; height: 1rem; background-color: #c62a2c"></div>
-            <div style="width: 40%; height: 1rem; background-color: #ecb731"></div>
-            <div style="width: 60%; height: 1rem; background-color: #029a4d"></div>
+          <div class="left-bars">
+            <div class="main-bar bar-delay-1" style="--final-width: 20%; height: 1rem; background-color: #c62a2c">
+            </div>
+            <div class="main-bar bar-delay-2" style="--final-width: 40%; height: 1rem; background-color: #ecb731">
+            </div>
+            <div class="main-bar bar-delay-3" style="--final-width: 60%; height: 1rem; background-color: #029a4d">
+            </div>
           </div>
 
           <!-- Logo and Tagline -->
@@ -116,16 +113,13 @@
           </div>
 
           <!-- Right Bars -->
-          <div style="
-                display: flex;
-                flex-direction: column;
-                align-items: flex-end;
-                width: 100%;
-                gap: 0.5rem;
-              ">
-            <div style="width: 20%; height: 1rem; background-color: #c62a2c"></div>
-            <div style="width: 40%; height: 1rem; background-color: #ecb731"></div>
-            <div style="width: 60%; height: 1rem; background-color: #029a4d"></div>
+          <div class="right-bars">
+            <div class="main-bar bar-delay-1" style="--final-width: 20%; height: 1rem; background-color: #c62a2c">
+            </div>
+            <div class="main-bar bar-delay-2" style="--final-width: 40%; height: 1rem; background-color: #ecb731">
+            </div>
+            <div class="main-bar bar-delay-3" style="--final-width: 60%; height: 1rem; background-color: #029a4d">
+            </div>
           </div>
         </div>
       </section>
@@ -977,6 +971,34 @@
   </script>
 
   <script>
+    let servicesAnimated = false;
+
+    function animateBarsIn(slide) {
+      const bars = slide.querySelectorAll('.main-bar');
+      bars.forEach(bar => {
+        bar.style.animation = 'none';
+        void bar.offsetWidth;
+        const delay = window.getComputedStyle(bar).animationDelay;
+        bar.style.animation = `growBar 0.8s ease-out ${delay} forwards`;
+      });
+    }
+
+    function animateBarsOut(slide) {
+      const bars = slide.querySelectorAll('.main-bar');
+      bars.forEach(bar => {
+        bar.style.animation = 'shrinkBar 0.5s ease-in forwards';
+      });
+    }
+
+    // When the presentation has already loaded
+    Reveal.on('ready', function (event) {
+      const currentSlide = event.currentSlide;
+      if (currentSlide && currentSlide.id === 'services-slide') {
+        animateBarsIn(currentSlide);
+        servicesAnimated = true;
+      }
+    });
+
     Reveal.on('slidechanged', function (event) {
       const currentSlide = event.currentSlide;
       const vbars = currentSlide.querySelectorAll('.vertical-bars');
@@ -984,7 +1006,16 @@
       const hbarssm = currentSlide.querySelectorAll('.horizontal-bars-sm');
       const bigtext = currentSlide.querySelectorAll('.big-text');
       const mediumtext = currentSlide.querySelectorAll('.medium-text');
+      const previousSlide = event.previousSlide;
 
+      if (previousSlide && previousSlide.id === 'services-slide') {
+        animateBarsOut(previousSlide);
+      }
+
+      if (currentSlide && currentSlide.id === 'services-slide') {
+        animateBarsIn(currentSlide);
+        servicesAnimated = true;
+      }
       vbars.forEach(bar => {
         bar.classList.remove('scale-up-vertical-top');
         void bar.offsetWidth;
